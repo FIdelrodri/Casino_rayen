@@ -14,23 +14,12 @@
     <div class="contenedor-fondo"> 
         <!-- logo -->
         <div class="barra_superior">
-            <img class="logowich_arriba" src="../../imagenes\reallogo.png" alt="">
+            <img class="logowich_arriba" src="../../../imagenes y 3D/Imagenes/logo_casino_rayen.png" alt="">
         </div>
         <!-- el formulario del madafakin profe -->
         <div class="container">
             <h2>Registrar Nuevo Usuario</h2>
-            <form action="registro.php" method="POST">
-                <!-- if de error de trigger -->
-                <?php if (isset($_SESSION['trigger_regirtro_error'])): ?>
-                        <div class="alerta_verde_afuera">
-                           <div class="alerta_verde_dentro">
-                                !Cuenta o mail ya existente¡ o hay carcater invalido
-                           </div>
-                        </div>
-                <?php 
-                   unset($_SESSION['trigger_regirtro_error']); 
-                   endif; 
-                 ?>
+            <form action="registro.php" method="POST">    
                 <!--  todo el form para ingresar datos -->
                 <label>Ingrese nombre de usuario:</label>
                  <p></p>

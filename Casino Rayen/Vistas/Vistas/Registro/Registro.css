@@ -16,18 +16,33 @@ html, body {
 }
 
 .contenedor-fondo {
-    background: linear-gradient( rgba(127, 0, 255, 0.2)), 
-                url('../../../imagenes y 3D/Imagenes/image.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    position: relative; /* Permite posicionar el fondo detrás */
     min-height: 100vh;
     width: 100vw;
     max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Evita que el desenfoque se salga de los bordes */
+}
+
+/* Pseudo-elemento para el fondo desenfocado */
+.contenedor-fondo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(127, 0, 255, 0.2)), 
+                url('../../../imagenes y 3D/Imagenes/Fondo_1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(3px); 
+    transform: scale(1.18);
+    z-index: -1;
 }
 
 .barra_superior {
