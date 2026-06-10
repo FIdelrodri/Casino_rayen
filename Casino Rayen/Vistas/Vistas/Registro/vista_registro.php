@@ -14,7 +14,7 @@
     <div class="contenedor-fondo"> 
         <!-- logo -->
         <div class="barra_superior">
-            <img class="logowich_arriba" src="../../../imagenes y 3D/Imagenes/logo_casino_rayen.png" alt="">
+            <img class="imagen_logo" src="../../../imagenes y 3D/Imagenes/logo_casino_rayen.png" alt="">
         </div>
         <!-- el formulario del madafakin profe -->
         <div class="container">
@@ -25,26 +25,28 @@
                  <p></p>
                 <input type="text" name="Nombre" placeholder="ej:juan123" required>
                  <!-- -->
-                <label>Ingrese su nombre:</label>
+                <label>Nombre:</label>
                 <input type="text" name="Nombre_persona" placeholder="Federico" >
                 <!-- -->
-                 <label>Ingrese su Apellido:</label>
+                 <label>Apellido:</label>
                 <input type="text" name="apellido" placeholder="Bouson" >
                 <!-- --> 
-                <label>Ingrese su DNI:</label>
-                <input type="number" name="DNI" placeholder="Ejm: 31532532" >
+                <label>DNI:</label>
+                <input type="number" name="DNI" placeholder="ej: 31532532" >
                 <!-- --> 
-                <label>Ingrese su Mail:</label>
+                <label>Mail:</label>
                 <input type="email" name="correo_electronico" placeholder="juan@ejemplo.com"  >
                 <!-- -->
                 <label>Contraseña:</label>
-                <input type="password" name="contraseña" placeholder="contraseañ segura" required>
+                <input type="password" name="contraseña" placeholder="ej: seguridad123" required>
                 <!-- -->
                 <button type="submit">Registrase</button>
                 <!-- -->
             </form>
             <!-- el link para iniciar sesion -->
-               <a> <div class="iniciar_sesion_relocate">¿ya tienes una cuenta? </div> <a href="../inicio/inicio.php">inicia sesion</a>
+            <p> </p>
+            <div class="iniciar_sesion_relocate">¿ya tienes una cuenta?  <a href="../inicio/inicio.php">inicia sesion</a></div>
+
         </div>
     </div>
 </body>

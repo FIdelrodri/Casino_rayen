@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100vh; 
     width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
@@ -11,64 +11,73 @@ html, body {
     box-sizing: inherit;
 }
 
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(127, 0, 255, 0.2), rgba(127, 0, 255, 0.2)), 
+                url('../../../imagenes y 3D/Imagenes/Fondo_1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px); 
+    transform: scale(1.18); 
+    z-index: -1; 
+}
+
 .logowich_arriba{
     height: 75px;
 }
 
 .contenedor-fondo {
-    position: relative; /* Permite posicionar el fondo detrás */
     min-height: 100vh;
-    width: 100vw;
-    max-width: 100%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Evita que el desenfoque se salga de los bordes */
-}
-
-/* Pseudo-elemento para el fondo desenfocado */
-.contenedor-fondo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(127, 0, 255, 0.2)), 
-                url('../../../imagenes y 3D/Imagenes/Fondo_1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    filter: blur(3px); 
-    transform: scale(1.18);
-    z-index: -1;
+    position: relative;
 }
 
 .barra_superior {
-    background: rgb(129, 17, 101);
-    position: absolute;
+    background: #240022;
+    position: fixed; 
     padding: 0.5rem;
     width: 100%;
     top: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    left: 0;
+    box-shadow: 0 15px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    box-sizing: border-box; 
 }
 
-.container {
-    background: rgb(107, 9, 107);
-    padding: 2rem;
+.container {    
+    background: #240022;
+    padding: 3rem;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    width: 350px;
-    margin: 10%;
-
+    box-shadow: 15px 15px 10px rgba(255, 255, 255, 0.2);
+    width: 400px;
+    margin-top: 100px; 
+    margin-bottom: 2rem;
 }
+
 .iniciar_sesion_relocate{
     color:rgb(255, 255, 255) ;
 }
+.imagen_logo{
+    height: 75px;
 
-h2 { text-align: center; color: #ffe600; margin-bottom: 1.5rem; }
-label { display: block; margin-bottom: 5px; color: #ffe600; }
-input { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
-button { width: 100%; padding: 10px; background-color: #ff00f2; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
-button:hover { background-color: #720575; }
+}
+
+h2 { text-align: center; color: #FFFFFF; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif; }
+label { display: block; margin-bottom: 5px; color: #ffffff;  font-family: 'Roboto', sans-serif;}
+input { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #8A66BC; border-radius: 5px; box-sizing: border-box; }
+button { width: 100%; padding: 10px; background-color: #720575; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+button:hover { background-color: #2e032c; }
