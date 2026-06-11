@@ -20,7 +20,7 @@ body::before {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(rgba(127, 0, 255, 0.2), rgba(127, 0, 255, 0.2)), 
-                url('../../../imagenes y 3D/Imagenes/Fondo_1.png');
+                url('../../../imagenes y 3D/Imagenes/Fondo_2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
