@@ -1,16 +1,16 @@
 <?php
 session_start();
 // conexion
-include("../../metodos/conexion.php");
+include("../../../Metodo/conexion.php");
 // agarra variables del form
 $nombre = $_POST['Nombre']; 
 $correo = $_POST['correo_electronico'];
-$pass = $_POST['contraseña'];
+$contrasena = $_POST['contraseña'];
 $dni = $_POST['DNI'];
 $nombre_persona = $_POST['Nombre_persona'];
 $apellido = $_POST['apellido'];
 // la madafakin consulta para ingresar los datos
-$Registrar_consulta = "CALL crearcuenta('$nombre', '$nombre_persona', '$apellido', '$dni', '$correo', '$pass')";
+$Registrar_consulta = "CALL crearcuenta('$nombre', '$nombre_persona', '$apellido', '$dni', '$correo', '$contrasena')";
 
 if (mysqli_query($conexion, $Registrar_consulta)) {
 
