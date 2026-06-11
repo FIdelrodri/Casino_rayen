@@ -73,3 +73,15 @@ insert into Usuario(Nombre_usuario, Nombre, Apellido, Dni, Correo_eletronico, Co
 values (p_nombre_usuario, p_nombre, p_apellido, p_dni, p_correo_electronico, p_contraseña);
 end
 $$ delimiter ;
+DELIMITER //
+
+CREATE PROCEDURE verificar_usuario(
+    IN nom_user VARCHAR(50), 
+    IN pass_user VARCHAR(255)
+)
+BEGIN
+    SELECT * FROM usuario 
+    WHERE Nombre_usuario = nom_user 
+      AND contraseña = pass_user;
+END 
+// DELIMITER ;

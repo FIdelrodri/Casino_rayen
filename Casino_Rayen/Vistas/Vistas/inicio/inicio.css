@@ -1,0 +1,114 @@
+html, body {
+    background-color: #fffb04;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; 
+    box-sizing: border-box; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.logowich_arriba{
+    height: 75px;
+}
+.alerta_roja_fuera{
+    background-color: #ff9100;
+    padding: 0rem;
+    height: 40px;
+    border-radius: 20px;
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.alerta_naranja_afuera{
+    background-color: #ff9100;
+    padding: 0rem;
+    height: 40px;
+    border-radius: 20px;
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+    width: 100%;
+
+}
+.alerta_roja_afuera{
+    background-color: #ff0000;
+    padding: 0rem;
+    height: 40px;
+    border-radius: 20px;
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+    width: 100%;
+
+}
+
+.alerta_verde_afuera{
+    background-color: #00ff4c;
+    padding: 0rem;
+    height: 40px;
+    border-radius: 20px;
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+    width: 100%;
+
+}
+
+.alerta_verde_dentro{
+
+    background-color: #ffffff;
+    padding: 0rem;
+    height: 25px;
+    width: 95%;
+    border-radius: 15px;
+    position: center;
+    display: flex;
+    justify-content: center; /* Horizontal */
+    align-items: center;
+}
+
+.contenedor-fondo {
+    background: linear-gradient(rgba(255, 235, 59, 0.4), rgba(255, 235, 59, 0.4)), 
+                url('../../imagenes/imagenfondo3.png');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100vw; 
+    max-width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.barra_superior {
+    background: rgb(0, 0, 0);
+    position: absolute;
+    padding: 0.5rem;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.container {
+    background: rgb(255, 255, 255);
+    margin-top: 10%;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+h2 { text-align: center; color: #333; margin-bottom: 1.5rem; }
+label { display: block; margin-bottom: 5px; color: #666; }
+input { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+button { width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+button:hover { background-color: #218838; }
