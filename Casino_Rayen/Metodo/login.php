@@ -17,8 +17,8 @@ if (mysqli_num_rows($resultado) > 0) {
 
     $fila = mysqli_fetch_assoc($resultado);
     $_SESSION['usuario_logueado'] = $nombre;
-    header("Location: ../Vistas/principal/principal.php");
+    header("Location: ../Vistas/Vistas/principal/principal.php");
 } else {
-    header("Location: ../vistas/inicio/inicio.php");
+    header("Location: ../vistas/Vistas/inicio/inicio.php");
 }
 ?>
