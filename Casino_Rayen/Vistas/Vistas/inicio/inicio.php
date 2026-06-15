@@ -14,7 +14,7 @@ session_start();
     <div class="contenedor-fondo">
         
         <div class="barra_superior">
-            <img class="imagen_logo" src="../../../imagenes y 3D/Imagenes/logo_casino_rayen.png" alt="">
+            <img class="imagen_logo" src="../../../imagenes_y_3D/Imagenes/logo_casino_rayen.png" alt="">
         </div>
         <div class="container">
             <h2>Iniciar Sesion</h2>

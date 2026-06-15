@@ -14,7 +14,7 @@
     <div class="contenedor-fondo"> 
         <!-- logo -->
         <div class="barra_superior">
-            <img class="imagen_logo" src="../../../imagenes y 3D/Imagenes/logo_casino_rayen.png" alt="">
+            <img class="imagen_logo" src="../../../imagenes_y_3D/Imagenes/logo_casino_rayen.png" alt="">
         </div>
         <!-- el formulario del madafakin profe -->
         <div class="container">

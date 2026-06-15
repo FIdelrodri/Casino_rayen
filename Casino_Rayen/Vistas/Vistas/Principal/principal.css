@@ -6,41 +6,21 @@ html, body {
     overflow-x: hidden;
     box-sizing: border-box;
 }
-
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
-body {
-    background-color: #fffb04; 
+body {  
+    background-color: #2f023d; 
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
-
-.carrito_compras{
-    height: 55px;
-}
-
-.imagen_pruducto_en_conteneiner{
-    max-width: 100%;
-    height: auto;
-}
-
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(rgba(127, 0, 255, 0.2), rgba(127, 0, 255, 0.2)), 
-                url('../../../imagenes y 3D/Imagenes/Fondo_1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(3px); 
-    transform: scale(1.18); 
-    z-index: -1; 
+body::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -56,8 +36,26 @@ body::before {
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     z-index: 1000;
 }
-
-
+.Texto_juegos h1 {
+font-size: 5rem;
+  font-weight: bold;
+  color: white; /* Color del relleno del texto */
+  -webkit-text-stroke: 4px black;     
+}
+.conteiner_de_ranking {
+    width: 85%;            
+    max-width: 1000px;     
+    aspect-ratio: 4 / 1;   
+    
+    background-color: #240022;
+    margin: 175px auto 0 auto; 
+    border-radius: 15px;
+    
+    background-image: url('Proyecto nuevo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .cosas_derecha{
     align-items: center;
@@ -78,19 +76,14 @@ body::before {
 .logowich_arriba{
     height: 75px;
 }
-
-
-
 .barra_derecha {
     position: relative;
 }
-
 .dropdown {
     position: relative;
     display: inline-block;
     padding-bottom: 10px; 
 }
-
 .btn-menu {
     padding: 10px 20px;
     background-color: #fffb04;
@@ -101,11 +94,9 @@ body::before {
     font-size: 14px;
     transition: background 0.2s;
 }
-
 .btn-menu:hover {
     background-color: #e6e200;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -119,7 +110,6 @@ body::before {
     
     margin-top: 0px; 
 }
-
 .dropdown-content a {
     color: #333333;
     padding: 12px 16px;
@@ -129,52 +119,18 @@ body::before {
     text-align: left;
     font-weight: normal;
 }
-
-/* Hover de las opciones  */
 .dropdown-content a:hover {
     background-color: #f4f4f9;
     color: #000000;
 }
-
 .dropdown-content a.opcion-logout:hover {
     background-color: #fce8e6;
     color: #c0392b;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-
-.conteiner_de_productos{
-    width: 100%;
-    padding: 20px;
-    gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.container {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    margin: 10px;
-    width: 100%;
-    max-width: 500px; 
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.boton_comprar_producto button {
-    padding: 10px 20px;
-    background-color: #66ff00;
-    border: 2px solid #000000; 
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
 
 @media (max-width: 768px) {
     .barra_superior {
