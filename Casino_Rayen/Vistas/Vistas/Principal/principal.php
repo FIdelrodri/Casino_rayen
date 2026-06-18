@@ -35,6 +35,7 @@ include("../../../Metodo/conexion.php");
         <div class="Texto_juegos"><h1> JUEGOS</h1></div>
         <div class="contenedor_juegos_grid">
             <a href="../../juego/coinflip/hola.html" class="tarjeta_juego">
+                <!-- Fuente usada: darumadrop ONE -->
                 <img src="../../../imagenes_y_3D/Imagenes/Tarjeta_principal_coinflip.png" alt="Juego 2">
             </a>
         </div>
