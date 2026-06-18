@@ -33,6 +33,11 @@ include("../../../Metodo/conexion.php");
         <div class="conteiner_de_ranking">   
         </div>
         <div class="Texto_juegos"><h1> JUEGOS</h1></div>
+        <div class="contenedor_juegos_grid">
+            <a href="../../juego/coinflip/hola.html" class="tarjeta_juego">
+                <img src="../../../imagenes_y_3D/Imagenes/Tarjeta_principal_coinflip.png" alt="Juego 2">
+            </a>
+        </div>
 
 </body>
 </html>
