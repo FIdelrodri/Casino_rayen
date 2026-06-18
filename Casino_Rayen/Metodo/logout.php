@@ -4,5 +4,5 @@ session_start();
 session_destroy(); 
 
 session_start(); 
-header("Location: ../Vistas/inicio/inicio.php");
+header("Location: ../Vistas\Vistas\inicio\inicio.php");
 ?>

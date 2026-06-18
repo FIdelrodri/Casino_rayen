@@ -24,7 +24,7 @@ include("../../../Metodo/conexion.php");
                         <button class="btn-menu">Mi Cuenta ▼</button>
                         <div class="dropdown-content">
                             
-                            <a href="../../../metodos/logout.php" class="opcion-logout">❌ Cerrar sesion</a> 
+                            <a href="../../../Metodo/logout.php" class="opcion-logout">❌ Cerrar sesion</a> 
                         </div>
                     </div>
                 </div>
