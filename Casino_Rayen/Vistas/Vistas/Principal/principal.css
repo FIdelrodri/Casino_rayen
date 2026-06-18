@@ -217,3 +217,20 @@ font-size: 5rem;
     transition: transform 0.2s ease;
     background-color: #50014c;
 }
+.dinero_continer {
+    height: 50px;
+    width: 200px;
+    border-radius: 30px;
+    background-color: #2f023d;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    gap: 10px;               
+    color: #bebb00;
+    font-size: 30px;
+}
+.imagen_croquetas_dinero{
+    
+    max-width: 40px;
+    max-height: 40px;
+}

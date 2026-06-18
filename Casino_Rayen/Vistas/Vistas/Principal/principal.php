@@ -19,6 +19,10 @@ include("../../../Metodo/conexion.php");
         <header class="barra_superior">
             <img class="logowich_arriba" src="../../../imagenes_y_3D\Imagenes\logo_casino_rayen.png" alt="Logo">
             <div class="cosas_derecha">
+                <div class="dinero_continer">
+                        <img class="imagen_croquetas_dinero" src="../../../imagenes_y_3D\Imagenes\croqueta.png">
+                    <div>[variable dinero]</div>
+                </div>
                 <div class="barra_derecha">
                     <div class="dropdown">
                         <button class="btn-menu">Mi Cuenta ▼</button>
