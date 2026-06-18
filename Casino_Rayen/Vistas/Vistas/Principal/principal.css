@@ -162,72 +162,58 @@ font-size: 5rem;
     }
 }
 
-/* ==========================================
-   CONTENEDOR DE JUEGOS RECTANGULAR E INVISIBLE
-   ========================================== */
+
 .contenedor_juegos_grid {
-    width: 85%;            /* Exactamente igual al ranking */
-    max-width: 1000px;     /* Exactamente igual al ranking */
-    margin: 30px auto;     /* Centrado y separado del título */
-    
+    width: 85%;            
+    max-width: 1000px;
+    margin: 30px auto;
     display: flex;
-    flex-wrap: wrap;       /* Envía los elementos extras a la siguiente fila */
-    gap: 20px;             /* Espacio de separación entre tarjetas */
-    justify-content: flex-start; /* Alinea los juegos desde la izquierda */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
     box-sizing: border-box;
 }
 
-/* Las tarjetas individuales dentro de la cuadrícula */
 .tarjeta_juego {
-    /* 
-       Fórmula matemática para 4 elementos por fila:
-       Restamos el espacio total de los 3 huecos/gaps (20px * 3 = 60px) 
-       y dividimos el espacio restante perfectamente en 4 partes.
-    */
     width: calc((100% - 60px) / 4); 
     
-    /* Mantiene una proporción vertical estética estilo carta de casino */
+
     aspect-ratio: 2 / 3; 
     
-    border-radius: 12px;   /* Esquinas redondeadas suaves */
-    overflow: hidden;      /* Corta la imagen si sobresale de las esquinas */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidad en el fondo morado */
-    transition: transform 0.2s ease; /* Efecto suave de movimiento */
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+    transition: transform 0.2s ease; 
 }
 
-/* Efecto visual opcional cuando pasas el mouse por encima de un juego */
 .tarjeta_juego:hover {
     transform: scale(1.03); 
     cursor: pointer;
 }
 
-/* Control estricto de las imágenes de tus juegos */
 .tarjeta_juego img {
     width: 100%;
     height: 100%;
-    object-fit: cover;     /* Ajusta y llena la tarjeta sin deformar la imagen */
+    object-fit: cover;   
     display: block;
 }
 
-/* Ajuste responsivo para celulares (Muestra 2 juegos por fila en pantallas chicas) */
 @media (max-width: 768px) {
     .contenedor_juegos_grid {
-        width: 90%;        /* Aprovecha mejor el espacio en móviles */
+        width: 90%;      
         gap: 15px;
     }
     .tarjeta_juego {
-        /* Restamos el único hueco intermedio (15px) y dividimos por 2 */
         width: calc((100% - 15px) / 2); 
     }
 }
 .tarjeta_juego {
-    display: block; /* Obliga al enlace a comportarse como un contenedor sólido */
-    
-    /* Todo lo demás queda EXACTAMENTE IGUAL a como lo pusimos antes */
+    display: block;
     width: calc((100% - 60px) / 4); 
     aspect-ratio: 2 / 3; 
     border-radius: 12px;   
     overflow: hidden;      
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
-    transition: transform 0.2s ease; 
+    transition: transform 0.2s ease;
+    background-color: #50014c;
 }
