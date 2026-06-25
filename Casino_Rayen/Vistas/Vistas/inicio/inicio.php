@@ -31,7 +31,7 @@ session_start();
             </form>
             <!-- por si no tienen una cuntardopolis -->
             <p> </p>
-            <div class="iniciar_sesion_relocate">¿ya tienes una cuenta?  <a href="../inicio/inicio.php">inicia sesion</a></div>
+            <div class="iniciar_sesion_relocate">¿Todavia no tienes una cuenta?  <a href="../registro/vista_registro.php">registrate</a></div>
         </div>
 
     </div>
