@@ -23,7 +23,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-
 .barra_superior {
     background: #240022;
     width: 100%;
@@ -37,20 +36,18 @@ body::-webkit-scrollbar {
     z-index: 1000;
 }
 .Texto_juegos h1 {
-font-size: 5rem;
-  font-weight: bold;
-  color: white; /* Color del relleno del texto */
-  -webkit-text-stroke: 4px black;     
+    font-size: 5rem;
+    font-weight: bold;
+    color: white; 
+    -webkit-text-stroke: 4px black;     
 }
 .conteiner_de_ranking {
     width: 85%;            
     max-width: 1000px;     
     aspect-ratio: 4 / 1;   
-    
     background-color: #240022;
     margin: 175px auto 0 auto; 
     border-radius: 15px;
-    
     background-image: url('Proyecto nuevo.png');
     background-size: cover;
     background-position: center;
@@ -107,7 +104,6 @@ font-size: 5rem;
     z-index: 2000;
     border-radius: 6px;
     overflow: hidden;
-    
     margin-top: 0px; 
 }
 .dropdown-content a {
@@ -130,7 +126,6 @@ font-size: 5rem;
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 
 @media (max-width: 768px) {
     .barra_superior {
@@ -162,7 +157,6 @@ font-size: 5rem;
     }
 }
 
-
 .contenedor_juegos_grid {
     width: 85%;            
     max-width: 1000px;
@@ -175,15 +169,14 @@ font-size: 5rem;
 }
 
 .tarjeta_juego {
+    display: block;
     width: calc((100% - 60px) / 4); 
-    
-
     aspect-ratio: 2 / 3; 
-    
-    border-radius: 12px; 
-    overflow: hidden; 
+    border-radius: 12px;   
+    overflow: hidden;      
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
-    transition: transform 0.2s ease; 
+    transition: transform 0.2s ease;
+    background-color: #50014c;
 }
 
 .tarjeta_juego:hover {
@@ -207,33 +200,35 @@ font-size: 5rem;
         width: calc((100% - 15px) / 2); 
     }
 }
-.tarjeta_juego {
-    display: block;
-    width: calc((100% - 60px) / 4); 
-    aspect-ratio: 2 / 3; 
-    border-radius: 12px;   
-    overflow: hidden;      
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
-    transition: transform 0.2s ease;
-    background-color: #50014c;
-}
+
 .dinero_continer {
     height: 50px;
-    padding: 0 10px;
+    padding: 0 18px;
     border-radius: 30px;
     background-color: #2f023d;
     display: flex;
     justify-content: center; 
     align-items: center;    
-    gap: 10px;               
-    color: #bebb00;
-    font-size: 30px;
+    gap: 12px;               
+    border: 1.5px solid rgba(255, 251, 4, 0.4);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+.texto_dinero {
+    color: #fffb04;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
 .imagen_croquetas_dinero{
-    
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 38px;
+    max-height: 38px;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
 }
+
 .imagen_cartel_responsiva {
     width: 85%;
     max-width: 1000px;
@@ -241,6 +236,7 @@ font-size: 5rem;
     display: block;
     margin: 175px auto 30px auto; 
 }
+
 @media (max-width: 768px) {
     .imagen_cartel_responsiva {
         width: 90%;

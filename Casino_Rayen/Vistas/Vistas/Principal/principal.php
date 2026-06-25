@@ -20,19 +20,19 @@ include("../../../Metodo/conexion.php");
             <img class="logowich_arriba" src="../../../imagenes_y_3D\Imagenes\logo_casino_rayen.png" alt="Logo">
             <div class="cosas_derecha">
                 <div class="dinero_continer">
-                        <img class="imagen_croquetas_dinero" src="../../../imagenes_y_3D\Imagenes\croqueta.png">
-                    <div>
+                <img class="imagen_croquetas_dinero" src="../../../imagenes_y_3D\Imagenes\croqueta.png">
+                        <div class="texto_dinero">
                         <?php
-                        $id_usuario = $_SESSION['id_usuario'];
+                            $id_usuario = $_SESSION['id_usuario'];
                             $sql = "select Saldo from Usuario where id_usuario = $id_usuario";
                             if ($resultado = mysqli_query($conexion, $sql)) {
-                                 $datos_usuario = mysqli_fetch_assoc($resultado);
-                                 $saldo_actual = $datos_usuario['Saldo'];
-                                echo $saldo_actual;
-                            }
-                        ?>
+                            $datos_usuario = mysqli_fetch_assoc($resultado);
+                            $saldo_actual = $datos_usuario['Saldo'];
+                           echo number_format($saldo_actual, 0, '', '.');
+                         }
+                         ?>
+                         </div>
                     </div>
-                </div>
                 <div class="barra_derecha">
                     
                     <div class="dropdown">
