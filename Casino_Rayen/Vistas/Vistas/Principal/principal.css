@@ -46,7 +46,7 @@ body::-webkit-scrollbar {
     max-width: 1000px;     
     aspect-ratio: 4 / 1;   
     background-color: #240022;
-    margin: 175px auto 0 auto; 
+    margin-top: 175px; 
     border-radius: 15px;
     background-image: url('Proyecto nuevo.png');
     background-size: cover;
@@ -234,7 +234,7 @@ body::-webkit-scrollbar {
     max-width: 1000px;
     height: auto;
     display: block;
-    margin: 175px auto 30px auto; 
+    margin: 105px auto 30px auto; 
 }
 
 @media (max-width: 768px) {

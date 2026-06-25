@@ -1,0 +1,255 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {  
+  background-color: #2f023d; 
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto; 
+  padding: 120px 20px 40px 20px;
+}
+
+.barra_superior {
+  background: #240022;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  z-index: 1000;
+  border-bottom: 2px solid #3d023b;
+}
+
+.cosas_derecha {
+  align-items: center;
+  margin-left: auto;
+  display: flex;     
+  flex-direction: row; 
+  gap: 20px;        
+}
+
+.logowich_arriba {
+  height: 65px;
+}
+
+.btn-menu, .btn-menu:visited, .btn-menu:active {
+  display: inline-block;
+  text-decoration: none !important;
+  padding: 10px 24px;
+  background: linear-gradient(180deg, #fffb04 0%, #d4d000 100%);
+  border: none;
+  border-radius: 8px;
+  color: #000000 !important;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(255, 251, 4, 0.2);
+  transition: all 0.2s ease;
+  text-align: center;
+}
+.btn-menu:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 251, 4, 0.4);
+}
+
+.dinero_continer {
+  height: 45px;
+  padding: 0 18px;
+  border-radius: 30px;
+  background-color: #1a0122;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  gap: 12px;              
+  border: 1.5px solid rgba(255, 251, 4, 0.4);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.texto_dinero {
+  color: #fffb04;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.imagen_croquetas_dinero {
+  max-width: 30px;
+  max-height: 30px;
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
+}
+
+.container_coin {
+  background-color: #240022;
+  width: 100%;
+  max-width: 800px; 
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+  .usuario-tarjeta {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.usuario-tarjeta:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: scale(1.01);
+}
+
+.puesto-badge {
+  font-size: 20px;
+  font-weight: 900;
+  color: #a084a8;
+  width: 40px;
+  text-align: center;
+}
+
+.info-usuario, .saldo-usuario {
+  display: flex;
+  flex-direction: column;
+}
+
+.saldo-usuario {
+  margin-left: auto;
+  text-align: right;
+}
+
+.etiqueta-usuario, .etiqueta-saldo {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8b6e91;
+  margin-bottom: 2px;
+}
+
+.nombre-usuario {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.monto-saldo {
+  color: #00ffcc; 
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+.usuario-tarjeta.top-1 {
+  background: linear-gradient(135deg, #2d1f00 0%, #523b00 100%);
+  border: 2px solid #ffd700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2), inset 0 0 15px rgba(255, 215, 0, 0.1);
+}
+.usuario-tarjeta.top-1 .puesto-badge {
+  font-size: 28px;
+}
+.usuario-tarjeta.top-1 .nombre-usuario {
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+.usuario-tarjeta.top-1 .monto-saldo {
+  color: #ffd700;
+  font-size: 22px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.usuario-tarjeta.top-1 .etiqueta-usuario, .usuario-tarjeta.top-1 .etiqueta-saldo {
+  color: #c2a74d;
+}
+
+.usuario-tarjeta.top-2 {
+  background: linear-gradient(135deg, #1e1e24 0%, #3a3a47 100%);
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 0 15px rgba(224, 224, 224, 0.15);
+}
+.usuario-tarjeta.top-2 .puesto-badge {
+  font-size: 26px;
+}
+.usuario-tarjeta.top-2 .monto-saldo {
+  color: #e0e0e0;
+  font-size: 20px;
+}
+.usuario-tarjeta.top-2 .etiqueta-usuario, .usuario-tarjeta.top-2 .etiqueta-saldo {
+  color: #9da1aa;
+}
+
+.usuario-tarjeta.top-3 {
+  background: linear-gradient(135deg, #24140a 0%, #442715 100%);
+  border: 2px solid #cd7f32;
+  box-shadow: 0 0 15px rgba(205, 127, 50, 0.15);
+}
+.usuario-tarjeta.top-3 .puesto-badge {
+  font-size: 26px;
+}
+.usuario-tarjeta.top-3 .monto-saldo {
+  color: #ff9f43;
+  font-size: 19px;
+}
+.usuario-tarjeta.top-3 .etiqueta-usuario, .usuario-tarjeta.top-3 .etiqueta-saldo {
+  color: #b08568;
+}
+
+/* --- ADAPTABILIDAD MÓVIL --- */
+@media (max-width: 768px) {
+  .barra_superior {
+      padding: 0.5rem 1rem;
+  }
+  .logowich_arriba {
+      height: 45px;
+  }
+  .cosas_derecha {
+      gap: 10px;
+  }
+  .btn-menu {
+      padding: 8px 14px;
+      font-size: 12px;
+  }
+  .texto_dinero {
+      font-size: 18px;
+  }
+  .dinero_continer {
+      height: 38px;
+      padding: 0 10px;
+  }
+  body {
+      padding-top: 100px;
+  }
+  .container_coin {
+      padding: 12px;
+      gap: 8px;
+  }
+  .usuario-tarjeta {
+      padding: 12px 14px;
+      gap: 12px;
+  }
+  .nombre-usuario, .monto-saldo {
+      font-size: 15px;
+  }
+  .usuario-tarjeta.top-1 .nombre-usuario { font-size: 17px; }
+  .usuario-tarjeta.top-1 .monto-saldo { font-size: 18px; }
+}
