@@ -41,17 +41,21 @@ body::-webkit-scrollbar {
     color: white; 
     -webkit-text-stroke: 4px black;     
 }
+
+body > a {
+    width: 85%;
+    max-width: 1200px;
+    display: block;
+    margin-top: 175px;
+}
+
 .conteiner_de_ranking {
-    width: 85%;            
-    max-width: 1000px;     
+    width: 100%;
+    height: auto;
     aspect-ratio: 4 / 1;   
     background-color: #240022;
-    margin-top: 175px; 
     border-radius: 15px;
-    background-image: url('Proyecto nuevo.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: block;
 }
 
 .cosas_derecha{
@@ -127,36 +131,6 @@ body::-webkit-scrollbar {
     display: block;
 }
 
-@media (max-width: 768px) {
-    .barra_superior {
-        padding: 0.5rem;
-    }
-    .logowich_arriba {
-        height: 50px;
-    }
-    .carrito_compras {
-        height: 40px;
-    }
-    .imagen_usuario_inside {
-        height: 45px;
-    }
-    .cosas_derecha {
-        gap: 10px;
-    }
-    .btn-menu {
-        padding: 8px 12px;
-        font-size: 13px;
-    }
-    .conteiner_usuario_arriba span {
-        display: none;
-    }
-    .container {
-        margin: 10px auto;
-        width: 90%;
-        padding: 1.5rem;
-    }
-}
-
 .contenedor_juegos_grid {
     width: 85%;            
     max-width: 1000px;
@@ -191,16 +165,6 @@ body::-webkit-scrollbar {
     display: block;
 }
 
-@media (max-width: 768px) {
-    .contenedor_juegos_grid {
-        width: 90%;      
-        gap: 15px;
-    }
-    .tarjeta_juego {
-        width: calc((100% - 15px) / 2); 
-    }
-}
-
 .dinero_continer {
     height: 50px;
     padding: 0 18px;
@@ -209,7 +173,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center; 
     align-items: center;    
-    gap: 12px;               
+    gap: 12px;              
     border: 1.5px solid rgba(255, 251, 4, 0.4);
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -238,6 +202,44 @@ body::-webkit-scrollbar {
 }
 
 @media (max-width: 768px) {
+    .barra_superior {
+        padding: 0.5rem;
+    }
+    body > a {
+        width: 90%;
+        margin-top: 120px;
+    }
+    .logowich_arriba {
+        height: 50px;
+    }
+    .carrito_compras {
+        height: 40px;
+    }
+    .imagen_usuario_inside {
+        height: 45px;
+    }
+    .cosas_derecha {
+        gap: 10px;
+    }
+    .btn-menu {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    .conteiner_usuario_arriba span {
+        display: none;
+    }
+    .container {
+        margin: 10px auto;
+        width: 90%;
+        padding: 1.5rem;
+    }
+    .contenedor_juegos_grid {
+        width: 90%;      
+        gap: 15px;
+    }
+    .tarjeta_juego {
+        width: calc((100% - 15px) / 2); 
+    }
     .imagen_cartel_responsiva {
         width: 90%;
         margin-top: 120px;

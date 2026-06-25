@@ -85,3 +85,15 @@ BEGIN
       AND contraseña = pass_user;
 END 
 // DELIMITER ;
+DELIMITER $$
+
+CREATE PROCEDURE actualizar_saldo(
+    IN p_id_usuario INT,
+    IN p_monto_cambio DECIMAL(18,2)
+)
+BEGIN
+    UPDATE Usuario SET Saldo = Saldo + p_monto_cambio WHERE id_usuario = p_id_usuario;
+    INSERT INTO historial (id_histo_usu, Nuevo_monto, Fecha) SELECT id_usuario, Saldo, NOW() FROM Usuario WHERE id_usuario = p_id_usuario;
+END$$
+
+DELIMITER ;

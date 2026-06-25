@@ -45,7 +45,9 @@ include("../../../Metodo/conexion.php");
                 </div>
             </div>
         </header>
-        <div class="conteiner_de_ranking">   
+            <a href="../ranking/vista_ranking.php">
+            <img class="conteiner_de_ranking" src="proyecto nuevo.png" alt="Cartel de Juegos">
+            </a>
         </div>
             <img class="imagen_cartel_responsiva" src="../../../imagenes_y_3D/Imagenes/Juegos_Cartel.png" alt="Cartel de Juegos">
         <div class="contenedor_juegos_grid">

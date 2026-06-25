@@ -105,9 +105,12 @@ function animate() {
             if (t >= 1) {
                 spinning        = false;
                 coin.rotation.y = targetRot;
-                
-                // OPCIONAL: Si tu sonido no tiene el "clink" final incorporado y querés cortarlo en seco:
-                // if (sonidoMoneda.isPlaying) sonidoMoneda.stop();
+
+                // Actualizar saldo después de que termina la animación
+                const display = document.getElementById('saldo-display');
+                if (display) {
+                    display.textContent = display.getAttribute('data-saldo-real');
+                }
             }
         } else if (!RESULTADO) {
             coin.rotation.y += 0.005;

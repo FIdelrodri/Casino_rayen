@@ -8,6 +8,14 @@ include("../../../Metodo/conexion.php");
 
 $resultado_color = isset($_SESSION['color']) ? $_SESSION['color'] : null;
 unset($_SESSION['color']);
+$id_usuario = $_SESSION['id_usuario'];
+$sql = "SELECT Saldo FROM Usuario WHERE id_usuario = $id_usuario";
+$res = mysqli_query($conexion, $sql);
+$datos_usuario = mysqli_fetch_assoc($res);
+$saldo_actual = $datos_usuario['Saldo'];
+
+$saldo_mostrar = isset($_SESSION['saldo_antes']) ? $_SESSION['saldo_antes'] : $saldo_actual;
+unset($_SESSION['saldo_antes']);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,20 +31,13 @@ unset($_SESSION['color']);
         <img class="logowich_arriba" src="../../../imagenes_y_3D/Imagenes/logo_casino_rayen.png" alt="Logo">
         <div class="cosas_derecha">
             <div class="dinero_continer">
-                 <img class="imagen_croquetas_dinero" src="../../../imagenes_y_3D/Imagenes/croqueta.png">
-                    <!-- Se añade una clase específica para estilizar el texto -->
-                <div class="texto_dinero">
-                  <?php
-                $id_usuario = $_SESSION['id_usuario'];
-                $sql = "SELECT Saldo FROM Usuario WHERE id_usuario = $id_usuario";
-                if ($res = mysqli_query($conexion, $sql)) {
-                $datos_usuario = mysqli_fetch_assoc($res);
-                // Formatea el número: sin decimales, usando punto para los miles
-                echo number_format($datos_usuario['Saldo'], 0, '', '.');
-        }
-        ?>
-    </div>
-</div>
+                <img class="imagen_croquetas_dinero" src="../../../imagenes_y_3D/Imagenes/croqueta.png">
+                <div class="texto_dinero" 
+                    id="saldo-display"
+                    data-saldo-real="<?= number_format($saldo_actual, 0, '', '.') ?>">
+                    <?= number_format($saldo_mostrar, 0, '', '.') ?>
+                </div>
+            </div>
             <div class="barra_derecha">
                 <a href="../../Vistas/Principal/principal.php" class="btn-menu">Inicio</a>
             </div>
