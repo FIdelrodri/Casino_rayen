@@ -219,7 +219,7 @@ font-size: 5rem;
 }
 .dinero_continer {
     height: 50px;
-    width: 200px;
+    padding: 0 10px;
     border-radius: 30px;
     background-color: #2f023d;
     display: flex;
@@ -233,4 +233,17 @@ font-size: 5rem;
     
     max-width: 40px;
     max-height: 40px;
+}
+.imagen_cartel_responsiva {
+    width: 85%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 175px auto 30px auto; 
+}
+@media (max-width: 768px) {
+    .imagen_cartel_responsiva {
+        width: 90%;
+        margin-top: 120px;
+    }
 }

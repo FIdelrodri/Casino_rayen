@@ -4,7 +4,7 @@ $user = "root";
 $pass = "";
 $db   = "Casino_rayen";
 
-$conexion = mysqli_connect($host, $user, $pass, $db);
+$conexion = mysqli_connect($host, $user, $pass, $db, '3307');
 
 if (!$conexion) {
     echo '1';

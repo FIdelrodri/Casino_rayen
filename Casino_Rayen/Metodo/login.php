@@ -14,10 +14,11 @@ if (!$resultado) {
 }
 
 if (mysqli_num_rows($resultado) > 0) {
-
     $fila = mysqli_fetch_assoc($resultado);
     $_SESSION['usuario_logueado'] = $nombre;
+    $_SESSION['id_usuario'] = $fila['id_usuario'];
     header("Location: ../Vistas/Vistas/principal/principal.php");
+    exit();
 } else {
     header("Location: ../vistas/Vistas/inicio/inicio.php");
 }
