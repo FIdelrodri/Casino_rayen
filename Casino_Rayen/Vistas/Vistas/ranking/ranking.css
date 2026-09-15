@@ -23,7 +23,7 @@ body {
 .barra_superior {
   background: #240022;
   width: 100%;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -43,7 +43,7 @@ body {
 }
 
 .logowich_arriba {
-  height: 65px;
+  height: 75px;
 }
 
 .btn-menu, .btn-menu:visited, .btn-menu:active {

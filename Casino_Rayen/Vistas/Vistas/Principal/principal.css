@@ -103,7 +103,7 @@ body > a {
     position: absolute;
     right: 0;
     background-color: #ffffff;
-    min-width: 180px;
+    min-width: 200px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
     z-index: 2000;
     border-radius: 6px;

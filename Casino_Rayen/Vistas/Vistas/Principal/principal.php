@@ -40,6 +40,17 @@ include("../../../Metodo/conexion.php");
                         <div class="dropdown-content">
                             
                             <a href="../../../Metodo/logout.php" class="opcion-logout">❌ Cerrar sesion</a> 
+                        
+                        <?php
+                        $sql = "select Rol from Usuario where id_usuario = $id_usuario";
+                        if ($resultado = mysqli_query($conexion, $sql)) {
+                        $Array_rol = mysqli_fetch_assoc($resultado);
+                        $rol = $Array_rol['Rol']; 
+                        }
+                        ?>
+                        <?php if ($rol == 2){ ?>
+                            <a href="../administracion/administracion.php">👑 Modo administracion</a> 
+                        <?php } ?>
                         </div>
                     </div>
                 </div>
