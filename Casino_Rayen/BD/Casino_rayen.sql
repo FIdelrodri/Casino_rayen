@@ -21,7 +21,7 @@ CREATE TABLE Usuario (
     Dni VARCHAR(20) NULL,
     Correo_eletronico VARCHAR(100) NULL,
     Saldo DECIMAL(18,2) DEFAULT 0.00,
-    Rol INT,
+    Rol INT default 1,
     Estatus INT
 );
 
@@ -173,3 +173,6 @@ BEGIN
     END IF;
 END$$
 DELIMITER ;
+
+insert into ROLES (nombre_rol) values 
+('Usuario'),('Admin');
