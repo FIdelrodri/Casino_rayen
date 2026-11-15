@@ -23,26 +23,16 @@ unset($_SESSION['saldo_antes']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pipilibre - Principal</title>
+    <link rel="stylesheet" href="../../componentes/barra_superior.css">
     <link rel="stylesheet" href="coinflip.css">
 </head>
 <body>
 
-    <header class="barra_superior">
-        <img class="logowich_arriba" src="../../../imagenes_y_3D/Imagenes/logo_casino_rayen.png" alt="Logo">
-        <div class="cosas_derecha">
-            <div class="dinero_continer">
-                <img class="imagen_croquetas_dinero" src="../../../imagenes_y_3D/Imagenes/croqueta.png">
-                <div class="texto_dinero" 
-                    id="saldo-display"
-                    data-saldo-real="<?= number_format($saldo_actual, 0, '', '.') ?>">
-                    <?= number_format($saldo_mostrar, 0, '', '.') ?>
-                </div>
-            </div>
-            <div class="barra_derecha">
-                <a href="../../Vistas/Principal/principal.php" class="btn-menu">Inicio</a>
-            </div>
-        </div>
-    </header>
+<?php
+$barra_saldo_texto = number_format($saldo_mostrar, 0, '', '.');
+$barra_boton = 'inicio';
+include(__DIR__ . "/../../componentes/barra_superior.php");
+?>
 
     <!-- Se envía el resultado de PHP de manera segura mediante data-resultado -->
     <div class="continer_coin">

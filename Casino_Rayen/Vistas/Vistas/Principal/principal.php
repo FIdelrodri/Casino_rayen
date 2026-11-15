@@ -12,59 +12,29 @@ include("../../../Metodo/conexion.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pipilibre - Principal</title>
+    <link rel="stylesheet" href="../../componentes/barra_superior.css">
     <link rel="stylesheet" href="principal.css">
 </head>
 <body>
 
-        <header class="barra_superior">
-            <img class="logowich_arriba" src="../../../imagenes_y_3D\Imagenes\logo_casino_rayen.png" alt="Logo">
-            <div class="cosas_derecha">
-                <div class="dinero_continer">
-                <img class="imagen_croquetas_dinero" src="../../../imagenes_y_3D\Imagenes\croqueta.png">
-                        <div class="texto_dinero">
-                        <?php
-                            $id_usuario = $_SESSION['id_usuario'];
-                            $sql = "select Saldo from Usuario where id_usuario = $id_usuario";
-                            if ($resultado = mysqli_query($conexion, $sql)) {
-                            $datos_usuario = mysqli_fetch_assoc($resultado);
-                            $saldo_actual = $datos_usuario['Saldo'];
-                           echo number_format($saldo_actual, 0, '', '.');
-                         }
-                         ?>
-                         </div>
-                    </div>
-                <div class="barra_derecha">
-                    
-                    <div class="dropdown">
-                        <button class="btn-menu">Mi Cuenta ▼</button>
-                        <div class="dropdown-content">
-                            
-                            <a href="../../../Metodo/logout.php" class="opcion-logout">❌ Cerrar sesion</a> 
-                        
-                        <?php
-                        $sql = "select Rol from Usuario where id_usuario = $id_usuario";
-                        if ($resultado = mysqli_query($conexion, $sql)) {
-                        $Array_rol = mysqli_fetch_assoc($resultado);
-                        $rol = $Array_rol['Rol']; 
-                        }
-                        ?>
-                        <?php if ($rol == 2){ ?>
-                            <a href="../administracion/administracion.php">👑 Modo administracion</a> 
-                        <?php } ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+<?php
+$barra_boton = 'cuenta';
+$barra_pagina = 'principal';
+include(__DIR__ . "/../../componentes/barra_superior.php");
+?>
             <a href="../ranking/vista_ranking.php">
             <img class="conteiner_de_ranking" src="proyecto nuevo.png" alt="Cartel de Juegos">
             </a>
         </div>
             <img class="imagen_cartel_responsiva" src="../../../imagenes_y_3D/Imagenes/Juegos_Cartel.png" alt="Cartel de Juegos">
+
         <div class="contenedor_juegos_grid">
             <a href="../../juego\coinflip\coinflip.php" class="tarjeta_juego">
                 <!-- Fuente usada: darumadrop ONE -->
                 <img src="../../../imagenes_y_3D/Imagenes/Tarjeta_principal_coinflip.png" alt="Juego 2">
+            </a>
+            <a href="../../juego/crash/crash.php" class="tarjeta_juego">
+                <img src="../../../imagenes_y_3D/Imagenes/Tarjeta_principal_crash.png" alt="Crash">
             </a>
         </div>
 </body>

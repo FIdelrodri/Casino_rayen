@@ -11,7 +11,6 @@ html, body {
     box-sizing: inherit;
 }
 
-
 body::before {
     content: "";
     position: fixed;
@@ -29,10 +28,6 @@ body::before {
     z-index: -1; 
 }
 
-.logowich_arriba{
-    height: 75px;
-}
-
 .contenedor-fondo {
     min-height: 100vh;
     width: 100%;
@@ -41,21 +36,6 @@ body::before {
     justify-content: center;
     align-items: center;
     position: relative;
-}
-
-.barra_superior {
-    background: #240022;
-    position: fixed; 
-    padding: 0.5rem;
-    width: 100%;
-    top: 0;
-    left: 0;
-    box-shadow: 0 15px 10px rgba(0,0,0,0.3);
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    box-sizing: border-box; 
 }
 
 .container {    
@@ -70,10 +50,6 @@ body::before {
 
 .iniciar_sesion_relocate{
     color:rgb(255, 255, 255) ;
-}
-.imagen_logo{
-    height: 75px;
-
 }
 
 h2 { text-align: center; color: #FFFFFF; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif; }

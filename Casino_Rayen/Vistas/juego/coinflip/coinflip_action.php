@@ -8,14 +8,14 @@ include("../../../Metodo/conexion.php");
 
 $dinero_apostado = (int)$_POST['Dinero_apostado']; 
 $rango = (int)$_POST['rango_apuesta'];
-$aleatorio = random_int(0, 100);
+$aleatorio = random_int(1, 100);
 
-if ($rango < 0  || $rango > 100) {
+if ($rango < 1 || $rango > 99) {
     $_Trigger_error['error_rango_apuesta'] = "Error";
     header("Location: coinflip.php");
     exit();
 }
-if ($dinero_apostado < 0.01) {
+if ($dinero_apostado < 1) {
     $_Trigger_error['error_dinero_apostado'] = "Error";
     header("Location: coinflip.php");
     exit();
@@ -33,7 +33,7 @@ if ($dinero_apostado > $dinero_disponible) {
 $_SESSION['saldo_antes'] = $dinero_disponible;
 
 if ($aleatorio <= $rango) {
-    $ganancia = round($dinero_apostado * (100 / $rango), 2);
+    $ganancia = intdiv($dinero_apostado * 100, $rango);
     $monto_final = $ganancia - $dinero_apostado; 
     $_SESSION['color']     = "verde";
     $_SESSION['resultado'] = "ganaste";

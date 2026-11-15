@@ -7,15 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="../../componentes/barra_superior.css">
     <link rel="stylesheet" href="Registro.css">
 </head>
 <body>
 
     <div class="contenedor-fondo"> 
-        <!-- logo -->
-        <div class="barra_superior">
-            <img class="imagen_logo" src="../../../imagenes_y_3D/Imagenes/logo_casino_rayen.png" alt="">
-        </div>
+        <?php include(__DIR__ . "/../../componentes/barra_superior.php"); ?>
         <!-- el formulario del madafakin profe -->
         <div class="container">
             <h2>Registrar Nuevo Usuario</h2>

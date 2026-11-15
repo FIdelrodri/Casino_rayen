@@ -21,10 +21,10 @@ if ($rol != 2) {
 
 $id_admin    = $_SESSION['id_usuario'];
 $id_usuario  = isset($_POST['id_usuario'])  ? (int)$_POST['id_usuario']    : 0;
-$nuevo_saldo = isset($_POST['nuevo_saldo']) ? (float)$_POST['nuevo_saldo'] : null;
+$nuevo_saldo = filter_var(isset($_POST['nuevo_saldo']) ? $_POST['nuevo_saldo'] : '', FILTER_VALIDATE_INT);
 
-if (!$id_usuario || $nuevo_saldo === null) {
-    header("Location: ../Vistas/Vistas/administracion/administracion.php?err=Datos inválidos");
+if (!$id_usuario || $nuevo_saldo === false || $nuevo_saldo < 0) {
+    header("Location: ../Vistas/Vistas/administracion/administracion.php?err=El saldo tiene que ser un número entero, 0 o mayor");
     exit();
 }
 
