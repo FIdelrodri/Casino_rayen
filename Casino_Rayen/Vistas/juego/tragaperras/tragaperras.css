@@ -1,0 +1,569 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: #2f023d;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 95px 20px 20px 20px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.continer_formulario, .continer_coin {
+    background-color: #240022;
+    flex: 1;
+    max-width: 550px;
+    min-height: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+.continer_formulario {
+    padding: 2.5rem 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 520px;
+}
+
+.form-titulo {
+    color: #fffb04;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1.8rem;
+    letter-spacing: 1px;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-label {
+    display: block;
+    color: #d4d4d4;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+}
+.input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 18px;
+    pointer-events: none;
+}
+.form-input {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    background: #3a0048;
+    border: 1.5px solid rgba(255,251,4,0.25);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    -moz-appearance: textfield;
+}
+.form-input::-webkit-outer-spin-button,
+.form-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.form-input:focus {
+    border-color: #fffb04;
+    background: #440055;
+}
+.form-input:disabled {
+    opacity: 0.6;
+}
+.form-divider {
+    height: 1px;
+    background: rgba(255,251,4,0.1);
+    margin: 1.8rem 0;
+}
+
+.btn-apostar {
+    width: 100%;
+    padding: 14px;
+    background: #fffb04;
+    color: #1a0020;
+    font-size: 16px;
+    font-weight: 800;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    transition: background 0.2s, transform 0.1s;
+}
+.btn-apostar:hover { background: #e6e200; }
+.btn-apostar:active { transform: scale(0.98); }
+.btn-apostar:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.btn-secundario {
+    background: #3a0048;
+    color: #fffb04;
+    border: 1.5px solid rgba(255,251,4,0.4);
+}
+.btn-secundario:hover {
+    background: #4d0060;
+}
+.btn-apostar[hidden] {
+    display: none;
+}
+.btn-apostar.saltable {
+    background: #d9d500;
+}
+
+/* mesa */
+.continer_coin {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    min-height: 520px;
+    padding: 16px;
+    transition: background-color 0.4s;
+}
+.continer_coin.modo_bono {
+    background-color: #3d2a00;
+    box-shadow: 0 0 0 2px #fffb04, 0 4px 25px rgba(255,200,0,0.45);
+}
+
+.cartel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+.cartel img {
+    width: 44px;
+    height: 44px;
+}
+.cartel_texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cartel_titulo {
+    color: #fffb04;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.cartel_premio {
+    color: #d4d4d4;
+    font-size: 12px;
+    text-align: center;
+}
+
+.aviso_bono {
+    background: #fffb04;
+    color: #3d2a00;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    animation: parpadeo 1.2s infinite;
+}
+.aviso_bono[hidden] {
+    display: none;
+}
+
+/* rodillos */
+.maquina {
+    position: relative;
+    width: 100%;
+    background: #0d0010;
+    border: 3px solid #fffb04;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.rodillos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.rodillo {
+    position: relative;
+    aspect-ratio: 1 / 3;
+    overflow: hidden;
+    background: linear-gradient(#2a0836, #1a0222 50%, #2a0836);
+    border-right: 2px solid #0d0010;
+}
+.rodillo:last-child {
+    border-right: none;
+}
+.rodillo.anticipando {
+    box-shadow: inset 0 0 25px 6px #fffb04;
+    animation: parpadeo 0.3s infinite;
+}
+.cinta {
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+}
+.rodillo.moviendo .cinta {
+    filter: blur(2.5px);
+}
+.celda {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 10%;
+    flex: none;
+}
+.celda img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    user-select: none;
+}
+.rodillos.hay_ganadoras .celda {
+    opacity: 0.35;
+    transition: opacity 0.3s;
+}
+.rodillos.hay_ganadoras .celda.gana {
+    opacity: 1;
+    animation: latido 0.7s infinite alternate;
+    filter: drop-shadow(0 0 8px #fffb04);
+}
+
+.lineas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.fila_mensaje {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 34px;
+    gap: 10px;
+}
+.texto_mensaje {
+    color: #d4d4d4;
+    font-size: 14px;
+}
+.texto_ganancia {
+    color: #fffb04;
+    font-size: 26px;
+    font-weight: 800;
+}
+.texto_ganancia.sube {
+    animation: salto 0.4s;
+}
+
+/* festejo */
+.festejo {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(20,0,26,0.82);
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+}
+.festejo[hidden] {
+    display: none;
+}
+.festejo_imagen {
+    width: 150px;
+    height: 150px;
+    animation: giro_suave 2s infinite alternate ease-in-out;
+}
+.festejo_imagen[hidden] {
+    display: none;
+}
+.festejo_titulo {
+    color: #fffb04;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 0 0 18px #ff9800;
+    animation: latido 0.5s infinite alternate;
+}
+.festejo_monto {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 900;
+    text-shadow: 0 0 14px #fffb04;
+}
+.festejo.nivel_mega, .festejo.nivel_super {
+    animation: destello 0.5s infinite;
+}
+.festejo.nivel_super .festejo_titulo {
+    font-size: 34px;
+    color: #ff6ad5;
+}
+.festejo.nivel_jackpot {
+    background: radial-gradient(circle, rgba(255,200,0,0.45), rgba(20,0,26,0.93) 70%);
+    animation: destello 0.35s infinite;
+}
+.festejo.nivel_jackpot .festejo_titulo {
+    font-size: 32px;
+}
+.festejo.nivel_jackpot .festejo_monto {
+    font-size: 56px;
+    color: #fff3a0;
+}
+.festejo.nivel_bono .festejo_titulo {
+    color: #7dff6a;
+    text-shadow: 0 0 18px #1b7a3a;
+}
+.festejo .btn-apostar {
+    width: auto;
+    padding: 12px 40px;
+}
+
+.lluvia {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+/* panel de apuesta */
+.selector_apuesta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.boton_paso {
+    width: 48px;
+    height: 48px;
+    flex: none;
+    background: #3a0048;
+    color: #fffb04;
+    font-size: 24px;
+    font-weight: 800;
+    border: 1.5px solid rgba(255,251,4,0.4);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.boton_paso:hover {
+    background: #4d0060;
+}
+.boton_paso:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+.campo_apuesta::-webkit-outer-spin-button,
+.campo_apuesta::-webkit-inner-spin-button { -webkit-appearance: none; }
+.campo_apuesta:focus {
+    border-color: #fffb04;
+}
+.campo_apuesta {
+    flex: 1;
+    text-align: center;
+    padding: 11px 0;
+    background: #3a0048;
+    border: 1.5px solid rgba(255,251,4,0.25);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    min-width: 0;
+    outline: none;
+    -moz-appearance: textfield;
+}
+.detalle_apuesta {
+    color: #d4d4d4;
+    font-size: 13px;
+    margin: 8px 0 12px;
+    text-align: center;
+}
+.aviso_tragaperras {
+    min-height: 20px;
+    margin: 0;
+    font-size: 14px;
+    color: #e74c3c;
+}
+.fila_opciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+.btn-chico {
+    flex: 1;
+    padding: 10px 4px;
+    background: #3a0048;
+    color: #d4d4d4;
+    border: 1.5px solid rgba(255,251,4,0.25);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn-chico:hover {
+    background: #4d0060;
+}
+.btn-chico.activo {
+    color: #fffb04;
+    border-color: #fffb04;
+}
+.ayuda {
+    color: #8c7a94;
+    font-size: 12px;
+    text-align: center;
+    margin: 12px 0 0;
+}
+
+/* tabla de premios */
+.dialogo_pagos {
+    background: #240022;
+    color: #d4d4d4;
+    border: 2px solid #fffb04;
+    border-radius: 12px;
+    max-width: 460px;
+    width: 92%;
+    max-height: 88vh;
+    padding: 20px;
+    font-size: 14px;
+}
+.dialogo_pagos::backdrop {
+    background: rgba(0,0,0,0.7);
+}
+.dialogo_pagos h3 {
+    color: #fffb04;
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+.tabla_pagos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+}
+.tabla_pagos th, .tabla_pagos td {
+    text-align: center;
+    padding: 4px 6px;
+    border-bottom: 1px solid rgba(255,251,4,0.12);
+}
+.tabla_pagos th {
+    color: #fffb04;
+}
+.tabla_pagos img {
+    width: 34px;
+    height: 34px;
+    vertical-align: middle;
+}
+.dialogo_pagos .mini {
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+}
+.dialogo_pagos p {
+    line-height: 1.45;
+    margin: 8px 0;
+}
+
+/* animaciones */
+@keyframes latido {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+@keyframes parpadeo {
+    50% { opacity: 0.55; }
+}
+@keyframes salto {
+    0% { transform: scale(0.6); }
+    60% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+@keyframes destello {
+    50% { background-color: rgba(255,255,255,0.2); }
+}
+@keyframes giro_suave {
+    from { transform: rotate(-6deg) scale(1); }
+    to { transform: rotate(6deg) scale(1.12); }
+}
+@keyframes temblor_chico {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-3px, 2px); }
+    50% { transform: translate(3px, -2px); }
+    75% { transform: translate(-2px, -2px); }
+}
+@keyframes temblor_grande {
+    0%, 100% { transform: translate(0, 0) rotate(0); }
+    20% { transform: translate(-8px, 5px) rotate(-0.6deg); }
+    40% { transform: translate(7px, -6px) rotate(0.6deg); }
+    60% { transform: translate(-6px, -4px) rotate(-0.4deg); }
+    80% { transform: translate(6px, 5px) rotate(0.4deg); }
+}
+.temblor_1 { animation: temblor_chico 0.15s 8; }
+.temblor_2 { animation: temblor_chico 0.1s 15; }
+.temblor_3 { animation: temblor_grande 0.12s 40; }
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 90px;
+        height: auto;
+        min-height: 100%;
+    }
+    .continer_formulario, .continer_coin {
+        flex: none;
+        width: 100%;
+        max-width: 500px;
+        min-height: 350px;
+    }
+    .continer_coin {
+        min-height: 0;
+        padding: 12px;
+    }
+    .cartel_titulo {
+        font-size: 19px;
+    }
+    .festejo_titulo {
+        font-size: 22px;
+    }
+    .festejo_monto {
+        font-size: 34px;
+    }
+    .festejo_imagen {
+        width: 100px;
+        height: 100px;
+    }
+}
