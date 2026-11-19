@@ -39,6 +39,9 @@ include(__DIR__ . "/../../componentes/barra_superior.php");
             <a href="../../juego/blackjack/blackjack.php" class="tarjeta_juego">
                 <img src="../../../imagenes_y_3D/Imagenes/Tarjeta_principal_blackjack.png" alt="Blackjack">
             </a>
+            <a href="../../juego/mayormenor/mayormenor.php" class="tarjeta_juego">
+                <img src="../../../imagenes_y_3D/Imagenes/Tarjeta_principal_mayormenor.png" alt="Mayor o Menor">
+            </a>
         </div>
 </body>
 
